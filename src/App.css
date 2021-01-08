@@ -1,0 +1,127 @@
+body {
+  background: rgb(133, 213, 242);
+  background: linear-gradient(
+    90deg,
+    rgba(133, 213, 242, 1) 1%,
+    rgba(35, 135, 179, 1) 32%,
+    rgba(113, 162, 173, 1) 90%,
+    rgba(150, 213, 226, 1) 95%,
+    rgba(141, 202, 217, 1) 99%
+  );
+}
+
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addContainer {
+  padding: 20px;
+}
+
+.addContainer input,
+.addContainer button,
+.addContainer select {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* ADD BUTTON */
+.addBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px !important;
+  outline: none;
+  font-size: 30px;
+}
+
+.tasksContainer {
+  padding: 10px;
+}
+
+.taskItem {
+  display: grid;
+  border: 1px solid #032faa;
+  border-radius: 7px;
+  grid-template-columns: 2.5% 85% 2.5%;
+  grid-template-areas: "check task edit";
+  column-gap: 3.333%;
+  min-width: 500px;
+  padding: 10px;
+  margin: 10px;
+  background-color: white !important;
+}
+
+.editBtn {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.editBtn:focus {
+  outline: none;
+}
+
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  width: 100px !important;
+}
+svg {
+  color: black;
+}
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+.select-items div,
+.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
